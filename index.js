@@ -18,18 +18,20 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model("user", userSchema);
 
 
-User.find({age: {$gt: 47}}).then((res) => {
-    console.log(res[0].name);
+
+User.deleteOne({name: "Abhishek"}).then((res) => {
+    console.log(res);
 }).catch((err) => {
     console.log(err);
 });
 
 
 
-
-
-
-
+// User.find({age: {$gt: 47}}).then((res) => {
+//     console.log(res[0].name);
+// }).catch((err) => {
+//     console.log(err);
+// });
 
 // User.insertMany([
 //     {name: "Sumit Singh", email: "sumitsingh310106@gmail.com", age: 18},
